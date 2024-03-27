@@ -31,4 +31,3 @@ jobs:
         args: >
           -Dsonar.projectKey=pruebas-sonar
           -Dsonar.organization=pruebas-sonar
-          # Aquí puedes agregar cualquier otro argumento necesario.
