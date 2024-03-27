@@ -9,8 +9,10 @@ on:
       - main
 
 jobs:
-  sonarcloud:
+  build:
+    name: Analyze on SonarCloud
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - name: SonarCloud Scan
@@ -18,8 +20,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
+      with:
         args: >
-            -Dsonar.projectKey=pruebas-sonar
-            -Dsonar.organization=pruebas-sonar
-            # Se puede agregar cualquier otro argumento aca.
+          -Dsonar.projectKey=pruebas-sonar
+          -Dsonar.organization=pruebas-sonar
+          # Aquí puedes agregar cualquier otro argumento necesario.
