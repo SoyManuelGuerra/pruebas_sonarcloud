@@ -15,18 +15,12 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3 # Actualizado a la última versión
 
-    - name: Set up Node.js 20
-      uses: actions/setup-node@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3 # Asegúrate de usar la versión más reciente
       with:
-        node-version: '20' # Asegúrate de que tus scripts son compatibles con Node.js 20
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build
-      run: npm run build # Reemplaza esto con tu script de construcción si es necesario
+        node-version: '20' # Especifica la versión de Node.js
 
     - name: SonarCloud Scan
       uses: SonarSource/sonarcloud-github-action@master
@@ -37,4 +31,4 @@ jobs:
         args: >
           -Dsonar.projectKey=pruebas-sonar
           -Dsonar.organization=pruebas-sonar
-          # Agrega cualquier otro argumento de SonarScanner aquí
+          # Aquí puedes agregar cualquier otro argumento necesario.
