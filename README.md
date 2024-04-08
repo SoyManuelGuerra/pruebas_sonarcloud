@@ -19,3 +19,5 @@ This is a sample project to test SonarCloud integration.
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+#Comentario de prueba para activar el sonarcloud
